@@ -50,7 +50,7 @@ const First = ({ setStep }) => {
         <ChangingText index={index} />
 
         <section className="flex gap-5">
-          <Button onClick={() => setStep(3)}>Yes</Button>
+          <Button onClick={() => setStep(2)}>Yes</Button>
           <Button
             variant="secondary"
             onClick={() => setIndex((current) => current + 1)}

@@ -37,7 +37,7 @@ const Third = ({ setStep }) => {
         disabled={false}
       />
       <div className="absolute bottom-0 left-1/2  -translate-x-1/2 my-10">
-        <Button onClick={()=>setStep(2)}>
+        <Button onClick={()=>setStep(3)}>
           Zaaa
         </Button>
       </div>

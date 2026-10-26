@@ -1,20 +1,23 @@
 "use client";
-import React, { useState } from "react";
+
+import { useState } from "react";
 import First from "./steps/First";
-import Third from "./steps/Third";
+import Letter from "./steps/Letter";
 import Flowers from "./components/Flowers";
-const StepFlow = () => {
+
+export default function StepFlow() {
   const [step, setStep] = useState(1);
+
   return (
     <div className="relative z-50">
       {step === 1 && <First setStep={setStep} />}
-      <div className={`${step === 1 && 2 && 'hidden'} `}>
-        <Third setStep={setStep} />
+
+      <div className={step === 2 ? "" : "hidden"}>
+        <Letter setStep={setStep} />
       </div>
-      {step === 2 && <Flowers />}
-      {/* {step === 3 && <Third setStep={setStep} />} */}
+
+      {step === 3 && <Flowers />}
+      
     </div>
   );
-};
-
-export default StepFlow;
+}

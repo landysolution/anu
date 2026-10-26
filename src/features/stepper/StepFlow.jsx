@@ -8,7 +8,7 @@ const StepFlow = () => {
   return (
     <div className="relative z-50">
       {step === 1 && <First setStep={setStep} />}
-      <div className={`${step === 1 && 'hidden'} `}>
+      <div className={`${step === 1 && 2 && 'hidden'} `}>
         <Third setStep={setStep} />
       </div>
       {step === 2 && <Flowers />}
